@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "dungeon-forge"
+version = "1.0.0"
+description = "Procedural roguelike dungeon generation — BSP, cellular automata, and drunkard's walk algorithms with ASCII/JSON/PNG export"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Nova", email = "novaoc@users.noreply.github.com" }]
+keywords = ["roguelike", "dungeon", "procedural", "gamedev", "map", "generator"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Games/Entertainment",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.optional-dependencies]
+png = ["Pillow>=10.0"]
+all = ["Pillow>=10.0"]
+
+[project.scripts]
+dungeon-forge = "dungeon_forge.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/novaoc/dungeon-forge"
+Repository = "https://github.com/novaoc/dungeon-forge"
